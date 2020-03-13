@@ -40,15 +40,15 @@ class Pupil : public Person {
   public:
     string School, ClassForm;
     float avgMark;
-    Pupil (string a, string b, float c) : Person (FirstName, LastName, Birthday.Day, Birthday.Month, Birthday.Year, Address, Sex) {
-      School = a;
-      ClassForm = b;
+    Pupil (string a1, string b1, float c, string a, string b, int c1, int c2, int c3, string d, char e) : Person (a, b, c1, c2, c3, d, e) {
+      School = a1;
+      ClassForm = b1;
       avgMark = c;
     }
     void tellPupilsInfo() {
       cout << "School: " << School << endl;
       cout << "Class Form: " << ClassForm << endl;
-      cout << "Average Mark: " << setprecision(2) << fixed << avgMark;
+      cout << "Average Mark: " << setprecision(2) << fixed << avgMark << endl;
     }
     void tellAllInfo() {
       tellPersonInfo();
@@ -68,7 +68,8 @@ int main() {
   Person a("Gitlan", "Gaby", 28, 8, 2002, "17/2", 'm');
   a.tellPersonInfo();
   a.sayHello();
-  Pupil b("George Calinescu", "11th", 8.8);
+  cout << "**********************\n";
+  Pupil b("George Calinescu", "11th", 8.8, "Gitlan", "Gaby", 28, 8, 2002, "17/2", 'm');
   b.tellAllInfo();
   return 0;
 }
