@@ -6,7 +6,7 @@ int main() {
   int i, n;
 
   system("clear");
-  std::cout << "How many Persons will be? "; 
+  std::cout << "\033[1;31mHow many Persons will be?\033[0m "; 
   std::cin >> n;
 
   Mem_alloc(n);
@@ -23,7 +23,7 @@ int main() {
 
   Mem_kill();
 
-  std::cout << "Do you want to clear the screen ;) ? [Y/n]: ";
+  std::cout << "\033[1;31mDo you want to clear the screen ;) ? [Y/n]: \033[0m";
   std::cin >> checkerc;
   checkerc = toupper(checkerc);
   if (checkerc == 'Y') system("clear");

@@ -14,11 +14,11 @@ class Student : public Person {
     }
 
     void tellStudentInfo() {
-      std::cout << "City: " << City << std::endl;
-      std::cout << "University: " << University << std::endl;
-      std::cout << "Faculty: " << Faculty << std::endl;
-      std::cout << "Average Mark: " << std::setprecision(2) << std::fixed << AvgMark << std::endl;
-      std::cout << "Group: " << Group << std::endl;
+      std::cout << "\033[0;34mCity: \033[0m" << City << std::endl;
+      std::cout << "\033[0;34mUniversity: \033[0m" << University << std::endl;
+      std::cout << "\033[0;34mFaculty: \033[0m" << Faculty << std::endl;
+      std::cout << "\033[0;34mAverage Mark: \033[0m" << std::setprecision(2) << std::fixed << AvgMark << std::endl;
+      std::cout << "\033[0;34mGroup: \033[0m" << Group << std::endl;
     }
 
     void tellAllInfo() {

@@ -12,9 +12,9 @@ class Pupil : public Person {
     }
 
     void tellPupilsInfo() {
-      std::cout << "School: " << School << std::endl;
-      std::cout << "Class Form: " << ClassForm << std::endl;
-      std::cout << "Average Mark: " << std::setprecision(2) << std::fixed << avgMark << std::endl;
+      std::cout << "\033[0;34mSchool: \033[0m" << School << std::endl;
+      std::cout << "\033[0;34mClass Form: \033[0m" << ClassForm << std::endl;
+      std::cout << "\033[0;34mAverage Mark: \033[0m" << std::setprecision(2) << std::fixed << avgMark << std::endl;
     }
 
     void tellAllInfo() {

@@ -15,11 +15,11 @@ class Employee : public Student {
     }
 
     void tellEmployeeInfo() {
-      std::cout << "Job Title: " << jobTitle << std::endl;
-      std::cout << "Company: " << company << std::endl;
-      std::cout << "Salary: " << salary << std::endl;
-      std::cout << "City of work: " << city << std::endl;
-      std::cout << "Fulltime: "; 
+      std::cout << "\033[0;34mJob Title: \033[0m" << jobTitle << std::endl;
+      std::cout << "\033[0;34mCompany: \033[0m" << company << std::endl;
+      std::cout << "\033[0;34mSalary: \033[0m" << salary << std::endl;
+      std::cout << "\033[0;34mCity of work: \033[0m" << city << std::endl;
+      std::cout << "\033[0;34mFulltime: \033[0m"; 
       fputs(fullTime ? "true" : "false", stdout); 
       std::cout << std::endl;
     }

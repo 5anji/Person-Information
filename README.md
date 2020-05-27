@@ -14,6 +14,21 @@ Here I tried to make output clearer. If you are <b>Mac OS X</b> or <b>Windows</b
 
 #### All is working fine. Send ideas that is need to add.
 
+# Patch 1.2:
+* Removed <i>using namespace <b>std</b></i> and rewritten program.
+
+* Added coloured text for orienting.  
+  <b>Warning:</b> It works only in <i>bash</i>, in another words only for Linux and Mac users. Unluck for Windows users 😜😜.
+
+* Decided not to add multi-threading, because the program isn't so complex yet.
+
+* Tested on <i>KDE Neon 5.18.5</i> - works fine.
+
+### Next patch: 
+
+* Little aligning in the output
+* Send ideas <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCFTJZKgSPbtdMMGmMlzCrXjzBNkncrsntwvHqZnRJpJXkjVfSbBFjJCxTZvCJXKgDRfPg">here</a> (gmail is here).
+
 # Patch 1.1:
 * All program was separated in more files:
 
@@ -34,11 +49,6 @@ Here I tried to make output clearer. If you are <b>Mac OS X</b> or <b>Windows</b
 * Little optimization:
 
     * Removed constructor from Input_info
-
-## Next patch:
-
-* Some output options will be coloured for orienting
-* Probably, will be added <i>Multi-Threading</i>
 
 # 
 ## _Wait for new updates on GitHub_

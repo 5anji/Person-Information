@@ -27,14 +27,14 @@ class Person {
     }
 
     void tellPersonInfo() {
-      std::cout << "FirstName: " << FirstName << std::endl;
-      std::cout << "LastName: " << LastName << std::endl;
-      std::cout << "Birthday: " << Birthday.Day << "." << Birthday.Month << "." << Birthday.Year << std::endl;
-      std::cout << "Address: " << Address << std::endl;
-      std::cout << "Sex: " << Sex << std::endl;
+      std::cout << "\033[1;34mFirstName: \033[0m" << FirstName << std::endl;
+      std::cout << "\033[1;34mLastName: \033[0m" << LastName << std::endl;
+      std::cout << "\033[1;34mBirthday: \033[0m" << Birthday.Day << "." << Birthday.Month << "." << Birthday.Year << std::endl;
+      std::cout << "\033[1;34mAddress: \033[0m" << Address << std::endl;
+      std::cout << "\033[1;34mSex: \033[0m" << Sex << std::endl;
     }
 
     void sayHello() {
-      std::cout << "My name is " + getFullname() << std::endl;
+      std::cout << "\033[1;34mMy name is " + getFullname() + "\033[0m"<< std::endl;
     }
 };
