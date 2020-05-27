@@ -1,15 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include "commands.h"
-using namespace std;
-
 
 int main() {
   int i, n;
 
   system("clear");
-  cout << "How many Persons will be? "; 
-  cin >> n;
+  std::cout << "How many Persons will be? "; 
+  std::cin >> n;
 
   Mem_alloc(n);
 
@@ -25,9 +23,10 @@ int main() {
 
   Mem_kill();
 
-  cout << "Do you want to clear the screen ;) ? [Y/n]: ";
-  cin >> checkerc;
-  if (checkerc == 'y' || checkerc == 'Y') system("clear");
+  std::cout << "Do you want to clear the screen ;) ? [Y/n]: ";
+  std::cin >> checkerc;
+  checkerc = toupper(checkerc);
+  if (checkerc == 'Y') system("clear");
   
   return 0;
 }

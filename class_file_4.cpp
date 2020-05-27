@@ -1,13 +1,12 @@
 #include <iostream>
-using namespace std;
 
 class Employee : public Student {
   public:
-    string jobTitle, company, city;
+    std::string jobTitle, company, city;
     int salary;
     bool fullTime;
 
-    Employee (string job, string comp, int sal, string cit, bool full, string Cit, string Univ, string Fac, float Avg, string Gr, string a, string b, int c1, int c2, int c3, string d, char e) : Student(Cit, Univ, Fac, Avg, Gr, a, b, c1, c2, c3, d, e){
+    Employee (std::string job, std::string comp, int sal, std::string cit, bool full, std::string Cit, std::string Univ, std::string Fac, float Avg, std::string Gr, std::string a, std::string b, int c1, int c2, int c3, std::string d, char e) : Student(Cit, Univ, Fac, Avg, Gr, a, b, c1, c2, c3, d, e){
       jobTitle = job;
       company = comp;
       salary = sal;
@@ -16,13 +15,13 @@ class Employee : public Student {
     }
 
     void tellEmployeeInfo() {
-      cout << "Job Title: " << jobTitle << endl;
-      cout << "Company: " << company << endl;
-      cout << "Salary: " << salary << endl;
-      cout << "City of work: " << city << endl;
-      cout << "Fulltime: "; 
+      std::cout << "Job Title: " << jobTitle << std::endl;
+      std::cout << "Company: " << company << std::endl;
+      std::cout << "Salary: " << salary << std::endl;
+      std::cout << "City of work: " << city << std::endl;
+      std::cout << "Fulltime: "; 
       fputs(fullTime ? "true" : "false", stdout); 
-      cout << endl;
+      std::cout << std::endl;
     }
 
     void tellAllInfo() {

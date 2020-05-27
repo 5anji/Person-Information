@@ -1,12 +1,11 @@
 #include <iostream>
-using namespace std;
 
 class Student : public Person {
   public:
-    string City, University, Faculty, Group;
+    std::string City, University, Faculty, Group;
     float AvgMark;
 
-    Student(string Cit, string Univ, string Fac, float Avg, string Gr, string a, string b, int c1, int c2, int c3, string d, char e) : Person (a, b, c1, c2, c3, d, e) {
+    Student(std::string Cit, std::string Univ, std::string Fac, float Avg, std::string Gr, std::string a, std::string b, int c1, int c2, int c3, std::string d, char e) : Person (a, b, c1, c2, c3, d, e) {
       City = Cit;
       University = Univ;
       Faculty = Fac;
@@ -15,11 +14,11 @@ class Student : public Person {
     }
 
     void tellStudentInfo() {
-      cout << "City: " << City << endl;
-      cout << "University: " << University << endl;
-      cout << "Faculty: " << Faculty << endl;
-      cout << "Average Mark: " << setprecision(2) << fixed << AvgMark << endl;
-      cout << "Group: " << Group << endl;
+      std::cout << "City: " << City << std::endl;
+      std::cout << "University: " << University << std::endl;
+      std::cout << "Faculty: " << Faculty << std::endl;
+      std::cout << "Average Mark: " << std::setprecision(2) << std::fixed << AvgMark << std::endl;
+      std::cout << "Group: " << Group << std::endl;
     }
 
     void tellAllInfo() {

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-using namespace std;
 
 struct Date {
   int Day, Month, Year;
@@ -8,11 +7,11 @@ struct Date {
 
 class Person {
   public:
-    string FirstName, LastName, Address;
+    std::string FirstName, LastName, Address;
     Date Birthday;
     char Sex;
 
-    Person (string a, string b, int c1, int c2, int c3, string d, char e) {
+    Person (std::string a, std::string b, int c1, int c2, int c3, std::string d, char e) {
       FirstName = a;
       LastName = b;
       Birthday.Day = c1;
@@ -20,22 +19,22 @@ class Person {
       Birthday.Year = c3;
       Address = d;
       Sex = e;
-      string getFullname();
+      std::string getFullname();
     }
 
-    string getFullname() {
+    std::string getFullname() {
       return FirstName + " " + LastName;
     }
 
     void tellPersonInfo() {
-      cout << "FirstName: " << FirstName << endl;
-      cout << "LastName: " << LastName << endl;
-      cout << "Birthday: " << Birthday.Day << "." << Birthday.Month << "." << Birthday.Year << endl;
-      cout << "Address: " << Address << endl;
-      cout << "Sex: " << Sex << endl;
+      std::cout << "FirstName: " << FirstName << std::endl;
+      std::cout << "LastName: " << LastName << std::endl;
+      std::cout << "Birthday: " << Birthday.Day << "." << Birthday.Month << "." << Birthday.Year << std::endl;
+      std::cout << "Address: " << Address << std::endl;
+      std::cout << "Sex: " << Sex << std::endl;
     }
 
     void sayHello() {
-      cout << "My name is " + getFullname() << endl;
+      std::cout << "My name is " + getFullname() << std::endl;
     }
 };
