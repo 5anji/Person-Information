@@ -1,13 +1,25 @@
 #include <iostream>
 #include <cstdlib>
 #include "commands.h"
+using namespace std;
 
 int main() {
   int i, n;
+  string numb;
 
   system("clear");
-  std::cout << "\033[1;31mHow many Persons will be?\033[0m "; 
-  std::cin >> n;
+
+  LOOP:
+  cout << "\t\033[1;31mHow many Persons will be?\033[0m "; 
+  cin >> numb;
+
+  if (isdigit(numb[0])) {
+    n = numb[0] - 48;
+  }
+  else {
+    cout << "\033[0;31mFATAL ERROR. Select Again.(needs int, detected char type)\033[0m" << endl;
+    goto LOOP;
+  }
 
   Mem_alloc(n);
 
@@ -23,8 +35,8 @@ int main() {
 
   Mem_kill();
 
-  std::cout << "\033[1;31mDo you want to clear the screen ;) ? [Y/n]: \033[0m";
-  std::cin >> checkerc;
+  cout << "\t\033[1;31mDo you want to clear the screen ;) ? [Y/n]: \033[0m";
+  cin >> checkerc;
   checkerc = toupper(checkerc);
   if (checkerc == 'Y') system("clear");
   
